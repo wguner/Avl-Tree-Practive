@@ -45,7 +45,7 @@ public:
         if(pNode == nullptr){
             return true;
         }
-        else(pNode->left == nullptr && )
+        return false;
     }
 
     void add(const T & newVal, AVLNode* &pNode) {
@@ -171,7 +171,7 @@ private:
         pMem->left = pNode;
         //update heights
         pNode->height = max(height(pNode->right), height(pNode->left)) + 1;
-        pMem->heigh = max(height(pMem->right), pMem->height)) + 1;
+        pMem->heigh = max(height(pMem->right), height(pMem->height)) + 1;
     }
     //got help from the textbook
     //pg 155
@@ -180,8 +180,8 @@ private:
         pNode ->left = pMem->right;
         pMem->right = pNode;
         //update heights
-        pNode->height = max(height(pNode->left), height(pNode-<right)) + 1;
-        pMem->height = max(height(pMem->left), height(pMem-<right)) + 1;
+        pNode->height = max(height(pNode->left), height(pNode->right)) + 1;
+        pMem->height = max(height(pMem->left), height(pMem->right)) + 1;
         pNode = pMem;
     }
 
